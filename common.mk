@@ -4,7 +4,7 @@ SRCS = $(wildcard *.c)
 OBJS = $(SRCS:.c=.o)
 DEPS = $(SRCS:.c=.d)
 BIN  =
-all:$(BIN) $(DEPS)
+all:$(BIN) $(DEPS) $(OBJS)
 ifneq ("$(wildcard $(DEPS))","")
 include $(DEPS)
 endif
