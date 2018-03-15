@@ -4,12 +4,12 @@ SRCS = $(wildcard *.c)
 OBJS = $(SRCS:.c=.o)
 DEPS = $(SRCS:.c=.d)
 BIN  = mp3
-all:$(BIN) $(DEPS)
+all:$(BIN) $(DEPS) $(OBJS)
 ifneq ("$(wildcard $(DEPS))","")
 include $(DEPS)
 endif
 $(BIN):$(OBJS)
-	gcc -o $@ $^
+	gcc -o $@ $^ ../lcd/lcd.o ../usb/usb.o ../media/media.o
 %.o:%.c
 	gcc -o $@ -c $(filter %.c,$^)
 %.d:%.c
