@@ -1,5 +1,5 @@
 .PHONY:all clean
-
+export BUILD_ROOT = $(shell pwd)
 all:
 	make -C lcd
 	make -C usb
