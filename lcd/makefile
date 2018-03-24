@@ -1,2 +1,2 @@
-BIN = 
+BIN =
 include  ../common.mk
