@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include "../lcd/lcd.h"
+#include "lcd.h"
 
 int main()
 {
